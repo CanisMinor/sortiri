@@ -5,7 +5,6 @@ def merge(left, right):
     """
     Takes two sorted lists and returns a single sorted list by comparing the
     elements one at a time.
-    [1, 2, 3, 4, 5, 6]
     """
     if not left:
         return right
@@ -17,7 +16,8 @@ def merge(left, right):
 
 
 def tim_sort(sequence):
-    runs, sorted_runs = [], []
+    runs = []
+    sorted_runs = []
     num_entries = len(sequence)
     new_run = [sequence[0]]
     for i in range(1, num_entries):

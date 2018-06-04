@@ -1,5 +1,6 @@
 from support.binary_tree import Node
 
+
 def store_sorted(root, sequence, current_index):
     if root != None:
         current_index = store_sorted(root.left, sequence, current_index)
@@ -8,7 +9,8 @@ def store_sorted(root, sequence, current_index):
         current_index = store_sorted(root.right, sequence, current_index)
     
     return current_index
- 
+
+
 def insert(node, key):
     # if the tree is empty, return a new node
     if node == None:
@@ -21,6 +23,7 @@ def insert(node, key):
         node.right = insert(node.right, key)
  
     return node
+
 
 def tree_sort(sequence):
     root = Node(sequence[0])

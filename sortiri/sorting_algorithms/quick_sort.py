@@ -14,4 +14,5 @@ def quick_sort(sequence):
     right = sequence[(wall + 1):]
     if len(right) > 0:
         right = quick_sort(right)
+
     return left + [pivot] + right

@@ -2,7 +2,7 @@ def shell_sort(sequence):
     sublist_count = len(sequence) // 2
     while sublist_count > 0:
         for start_position in range(sublist_count):
-           gap_insertion_sort(sequence, start_position, sublist_count)
+            gap_insertion_sort(sequence, start_position, sublist_count)
            
         sublist_count = sublist_count // 2
 
