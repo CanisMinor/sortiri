@@ -16,8 +16,6 @@ def selection_sort(sequence):
             if sequence[location] > sequence[position_of_max]:
                 position_of_max = location
 
-        temp = sequence[fill_slot]
-        sequence[fill_slot] = sequence[position_of_max]
-        sequence[position_of_max] = temp
+        sequence[fill_slot], sequence[position_of_max] = sequence[position_of_max], sequence[fill_slot]
 
     return sequence
