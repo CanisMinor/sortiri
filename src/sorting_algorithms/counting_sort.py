@@ -1,12 +1,5 @@
 import warnings
-
-def find_maximum_value(sequence):
-    max_val = sequence[0]
-    for number in sequence:
-        if number > max_val:
-            max_val = number
-
-    return max_val
+from support.find_max_value import find_max_value
 
 def counting_sort(sequence):
     '''
@@ -15,7 +8,7 @@ def counting_sort(sequence):
            integers in natural order.
     '''
     num_entries = len(sequence)
-    max_val = find_maximum_value(sequence)
+    max_val = find_max_value(sequence)
     num_buckets = max_val + 1
     counts = [0] * num_buckets
 
@@ -28,8 +21,8 @@ def counting_sort(sequence):
             
 
     seq_index = 0
-    for integer_value in xrange(num_buckets):
-        for count in xrange(counts[integer_value]):
+    for integer_value in range(num_buckets):
+        for count in range(counts[integer_value]):
             sequence[seq_index] = integer_value
             seq_index += 1
 

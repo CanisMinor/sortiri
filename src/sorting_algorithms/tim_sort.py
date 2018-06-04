@@ -1,4 +1,4 @@
-from sorting_algorithms import insertion_sort
+from sorting_algorithms.insertion_sort import insertion_sort
 
 
 def merge(left, right):
@@ -41,4 +41,4 @@ def tim_sort(sequence):
     for run in sorted_runs:
         sorted_array = merge(sorted_array, run)
 
-    print sorted_array
+    return sorted_array

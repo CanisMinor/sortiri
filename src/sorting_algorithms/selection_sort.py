@@ -10,7 +10,7 @@ def find_index_of_minimum_value(sequence):
 
 def selection_sort(sequence):
     num_values = len(sequence)
-    for index in xrange(num_values):
+    for index in range(num_values):
         min_index = find_index_of_minimum_value(sequence[index:])
         sequence[index], sequence[min_index] = sequence[min_index], sequence[index]
 

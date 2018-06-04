@@ -1,5 +1,5 @@
 import math
-from sorting_algorithms import quick_sort
+from sorting_algorithms.quick_sort import quick_sort
 
 def bucket_sort(sequence, num_buckets):
     biggest = 0
