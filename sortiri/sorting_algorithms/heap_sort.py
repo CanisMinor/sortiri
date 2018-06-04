@@ -1,4 +1,5 @@
 def heapify(sequence, heap_size, root):
+    """Heapify a sequence of numbers."""
     largest = root
     left = (2 * root) + 1
     right = (2 * root) + 2
@@ -19,6 +20,7 @@ def heapify(sequence, heap_size, root):
         heapify(sequence, heap_size, largest)
 
 def heap_sort(sequence):
+    """Perform heap sort on a sequence of numbers."""
     num_entries = len(sequence)
 
     # Build a maxheap.
@@ -29,3 +31,6 @@ def heap_sort(sequence):
     for i in range(num_entries - 1, 0, -1):
         sequence[i], sequence[0] = sequence[0], sequence[i]
         heapify(sequence, i, 0)
+
+    return sequence
+    

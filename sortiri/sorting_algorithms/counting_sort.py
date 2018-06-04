@@ -2,9 +2,7 @@ import warnings
 from support.find_max_value import find_max_value
 
 def counting_sort(sequence):
-    '''
-        Returns a sorted list of positive integers.
-    '''
+    """Perform counting sort on a sequence of positive integers."""
     max_val = find_max_value(sequence)
     num_buckets = max_val + 1
     counts = [0] * num_buckets

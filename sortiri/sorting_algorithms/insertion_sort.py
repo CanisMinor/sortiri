@@ -1,4 +1,5 @@
 def insertion_sort(sequence):
+    """Perform insertion sort on a sequence of numbers."""
     num_entries = len(sequence)
     outer_index =  1
     while outer_index < num_entries:

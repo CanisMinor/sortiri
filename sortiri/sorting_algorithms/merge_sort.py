@@ -1,4 +1,5 @@
 def merge_sort(sequence):
+    """Perform merge sort on a sequence of numbers."""
     num_entries = len(sequence)
     if num_entries > 1:
         mid = num_entries // 2
@@ -32,3 +33,6 @@ def merge_sort(sequence):
             sequence[total_index] = right_half[right_index]
             right_index = right_index + 1
             total_index = total_index + 1
+    
+    return sequence
+    

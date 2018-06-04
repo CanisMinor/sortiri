@@ -2,6 +2,7 @@ from support.binary_tree import Node
 
 
 def store_sorted(root, sequence, current_index):
+    """Linearise the binary search tree into an array of sorted numbers."""
     if root != None:
         current_index = store_sorted(root.left, sequence, current_index)
         sequence[current_index] = root.key
@@ -12,6 +13,7 @@ def store_sorted(root, sequence, current_index):
 
 
 def insert(node, key):
+    """Insert a given key into the binary search tree."""
     # if the tree is empty, return a new node
     if node == None:
         return Node(key)
@@ -26,14 +28,14 @@ def insert(node, key):
 
 
 def tree_sort(sequence):
+    """Perform tree sort on a sequence of numbers."""
     root = Node(sequence[0])
  
     # construct search tree
     for value in sequence[1:]:
-        print("new value ", str(value))
         insert(root, value)
  
     # linearise the search tree into a sorted sequence
-    print(store_sorted(root, sequence, 0))
+    store_sorted(root, sequence, 0)
 
     return sequence

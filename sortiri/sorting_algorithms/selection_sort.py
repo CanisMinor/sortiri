@@ -9,6 +9,7 @@ def find_index_of_minimum_value(sequence):
     return min_index
 
 def selection_sort(sequence):
+    """Perform selection sort on a sequence of numbers."""
     num_values = len(sequence)
     for index in range(num_values):
         min_index = find_index_of_minimum_value(sequence[index:])

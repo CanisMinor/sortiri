@@ -12,10 +12,11 @@ def get_num_digits(n):
     while n > 0:
         n //= 10
         i += 1
-    
+
     return i
 
 def radix_sort(sequence):
+    """Perform radix sort on a sequence of numbers."""
     max_value = find_max_value(sequence)    
     num_digits = get_num_digits(max_value)
 

@@ -2,10 +2,8 @@ from sorting_algorithms.insertion_sort import insertion_sort
 
 
 def merge(left, right):
-    """
-    Takes two sorted lists and returns a single sorted list by comparing the
-    elements one at a time.
-    """
+    """Takes two sorted lists and returns a single sorted list by comparing the
+    elements one at a time."""
     if not left:
         return right
     if not right:
@@ -16,6 +14,7 @@ def merge(left, right):
 
 
 def tim_sort(sequence):
+    """Perform tim sort on a sequence of numbers."""
     runs = []
     sorted_runs = []
     num_entries = len(sequence)

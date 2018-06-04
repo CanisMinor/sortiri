@@ -1,4 +1,5 @@
 def quick_sort(sequence):
+    """Perform quick sort on a sequence of numbers."""
     wall = 0
     pivot = sequence[-1]
     
