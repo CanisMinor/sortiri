@@ -16,9 +16,8 @@ def bucket_sort(sequence, num_buckets):
         else:
             buckets[bucket_index].append(number)
 
-    for index, bucket in enumerate(buckets):
-        buckets[index] = quick_sort(bucket)
+    sorted_list = []
+    for bucket in buckets:
+        sorted_list.extend(quick_sort(bucket))
 
-    new_list = [number for number in bucket for bucket in buckets]
-
-    return new_list
+    return sorted_list

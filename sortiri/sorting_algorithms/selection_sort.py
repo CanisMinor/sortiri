@@ -7,12 +7,17 @@ def find_index_of_minimum_value(sequence):
             min_index = index
     
     return min_index
-
+    
 def selection_sort(sequence):
     """Perform selection sort on a sequence of numbers."""
-    num_values = len(sequence)
-    for index in range(num_values):
-        min_index = find_index_of_minimum_value(sequence[index:])
-        sequence[index], sequence[min_index] = sequence[min_index], sequence[index]
+    for fill_slot in range(len(sequence)-1,0,-1):
+        position_of_max = 0
+        for location in range(1,fill_slot+1):
+            if sequence[location] > sequence[position_of_max]:
+                position_of_max = location
+
+        temp = sequence[fill_slot]
+        sequence[fill_slot] = sequence[position_of_max]
+        sequence[position_of_max] = temp
 
     return sequence
