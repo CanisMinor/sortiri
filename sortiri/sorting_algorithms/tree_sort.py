@@ -1,4 +1,4 @@
-from support.binary_tree import Node
+from support.binary_tree import BinaryTreeNode
 
 
 def store_sorted(root, sequence, current_index):
